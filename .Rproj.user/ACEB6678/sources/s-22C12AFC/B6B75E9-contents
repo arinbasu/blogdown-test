@@ -11,14 +11,53 @@ tags:
   - plot
 ---
 
-## The first try
+## Setting Hugo RStudio Blogging with Netlify & Github ... er ...
 
-Setting up a blog using RStudio is exciting. 
-Steps:
+Learned my lessons in setting up the blog and hopefully this will be useful information for some. RStudio makes management of the blog with github easy I'd say. Yihui explains the details in the book [Blogdown](https://bookdown.org/yihui/blogdown/workflow.html) which you must read. Even then, you may end up with some troubles as I did. 
 
-1. Install blogdown
-2. Write the post 
-3. Connect Github to Netlify
-4. Push the contents of the folder to Git
-5. Deploy
+Assuming that you hava RStudio set up and configured, you will need to do the following:
+
+## First, the nine-step process to get going on your machine
+
+1. First, Install blogdown package. 
+2. Next, install Hugo if you have not already installed it.
+3. Edit the `~/.Rprofile` site as they detail in the book.
+4. Then generate the site using `blogdown::new_site`
+5. I will need to change the theme to academic, so will see how we do that here. (I still haven't figured that yet, :-) ). Also, check and edit the config.toml file.
+6. Write a post using the Addins dropdown menu. Most of the stuff should be ready for you to configure anyway, which is good. 
+7. Click Serve Site to see the changes in a preview, but remember that when you will serve site you cannot work on the R console. It is locked.
+8. Stop the server and restart R (In Mac, Cmd-shift-F10, or Session >> Restart R)
+9. Then, do `blogdown::hugo_build()`; this will build the site for you and put all files in the public folder.
+
+## Next, Blogdown book recommends we use Netlify for hosting and this is great. 
+
+The best way to do is to get an account with Netlify and then connect a github repo to Netlify. But this is tricky. So, here are the lessons I learned.
+
+1. Step 1, create a [github repo](http://www.github.com), remember to create an empty repo (do not add a readme file, do not add a .gitignore)
+2. Step 2, assuming you have installed git, git into your repo from your folder where you have the files. You can use github's application appropriate for your operating system, or if you are in Mac:
+ 
+ - First install git and then do:
+ - cd into the folder where you have the site files
+ - Issue the git commands:
+ 
+ 
+```bash
+ git init # initialise a git repo on your local machine
+ git remote add origin <type the github repo url>
+ git add . # caveat: bad practice, but do it this once
+ git commit -m "my first commit" 
+ # type your own message within quotes
+ git push -u origin master 
+ # push everything to the remote repo
+```
+
+ 
+ 
+Phew, if everything goes well, you will have a github repo with all the files and folders from your site. Now, go to step three
+
+3. Step 3, you will connect your github repo to netlify. This is tricky, as Netlify only recognises hugo_0.19! I had a hard time in specifying hugo version 0.30 that I currently use and I had repeated build errors. Remember to put hugo_0.19 for build command, and public for the production folder. I found that adding "hugo" to buiild command in netlify does not work. 
+4. Step 4, deploy. Netlify will provide you with a peculiar site name that you will need to reconfigure. I think the best thing would be to contact rbind.org folks and get an rbind.org sitename address if your aim is to work in data sciencey type of work or using it as a knowledgebase for Rstudio or R and data science. 
+
+I am still finding out. 
+
 

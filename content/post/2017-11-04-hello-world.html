@@ -13,14 +13,48 @@ tags:
 
 
 
-<div id="the-first-try" class="section level2">
-<h2>The first try</h2>
-<p>Setting up a blog using RStudio is exciting. Steps:</p>
+<div id="setting-hugo-rstudio-blogging-with-netlify-github-er" class="section level2">
+<h2>Setting Hugo RStudio Blogging with Netlify &amp; Github … er …</h2>
+<p>Learned my lessons in setting up the blog and hopefully this will be useful information for some. RStudio makes management of the blog with github easy I’d say. Yihui explains the details in the book <a href="https://bookdown.org/yihui/blogdown/workflow.html">Blogdown</a> which you must read. Even then, you may end up with some troubles as I did.</p>
+<p>Assuming that you hava RStudio set up and configured, you will need to do the following:</p>
+</div>
+<div id="first-the-nine-step-process-to-get-going-on-your-machine" class="section level2">
+<h2>First, the nine-step process to get going on your machine</h2>
 <ol style="list-style-type: decimal">
-<li>Install blogdown</li>
-<li>Write the post</li>
-<li>Connect Github to Netlify</li>
-<li>Push the contents of the folder to Git</li>
-<li>Deploy</li>
+<li>First, Install blogdown package.</li>
+<li>Next, install Hugo if you have not already installed it.</li>
+<li>Edit the <code>~/.Rprofile</code> site as they detail in the book.</li>
+<li>Then generate the site using <code>blogdown::new_site</code></li>
+<li>I will need to change the theme to academic, so will see how we do that here. (I still haven’t figured that yet, :-) ). Also, check and edit the config.toml file.</li>
+<li>Write a post using the Addins dropdown menu. Most of the stuff should be ready for you to configure anyway, which is good.</li>
+<li>Click Serve Site to see the changes in a preview, but remember that when you will serve site you cannot work on the R console. It is locked.</li>
+<li>Stop the server and restart R (In Mac, Cmd-shift-F10, or Session &gt;&gt; Restart R)</li>
+<li>Then, do <code>blogdown::hugo_build()</code>; this will build the site for you and put all files in the public folder.</li>
 </ol>
+</div>
+<div id="next-blogdown-book-recommends-we-use-netlify-for-hosting-and-this-is-great." class="section level2">
+<h2>Next, Blogdown book recommends we use Netlify for hosting and this is great.</h2>
+<p>The best way to do is to get an account with Netlify and then connect a github repo to Netlify. But this is tricky. So, here are the lessons I learned.</p>
+<ol style="list-style-type: decimal">
+<li>Step 1, create a <a href="http://www.github.com">github repo</a>, remember to create an empty repo (do not add a readme file, do not add a .gitignore)</li>
+<li>Step 2, assuming you have installed git, git into your repo from your folder where you have the files. You can use github’s application appropriate for your operating system, or if you are in Mac:</li>
+</ol>
+<ul>
+<li>First install git and then do:</li>
+<li>cd into the folder where you have the site files</li>
+<li>Issue the git commands:</li>
+</ul>
+<pre class="bash"><code> git init # initialise a git repo on your local machine
+ git remote add origin &lt;type the github repo url&gt;
+ git add . # caveat: bad practice, but do it this once
+ git commit -m &quot;my first commit&quot; 
+ # type your own message within quotes
+ git push -u origin master 
+ # push everything to the remote repo</code></pre>
+<p>Phew, if everything goes well, you will have a github repo with all the files and folders from your site. Now, go to step three</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Step 3, you will connect your github repo to netlify. This is tricky, as Netlify only recognises hugo_0.19! I had a hard time in specifying hugo version 0.30 that I currently use and I had repeated build errors. Remember to put hugo_0.19 for build command, and public for the production folder. I found that adding “hugo” to buiild command in netlify does not work.</li>
+<li>Step 4, deploy. Netlify will provide you with a peculiar site name that you will need to reconfigure. I think the best thing would be to contact rbind.org folks and get an rbind.org sitename address if your aim is to work in data sciencey type of work or using it as a knowledgebase for Rstudio or R and data science.</li>
+</ol>
+<p>I am still finding out.</p>
 </div>
