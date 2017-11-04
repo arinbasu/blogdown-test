@@ -13,20 +13,24 @@ tags:
 
 
 
-<div id="settling-hugo-rstudio-blogging-with-netlify-github" class="section level2">
-<h2>Settling Hugo RStudio Blogging with Netlify &amp; Github</h2>
-<p>Learned my lessons in setting up the blog and hopefully this will be useful information for some. RStudio makes management of the blog with github easy I’d say. Yihui explains the details in the book <a href="https://bookdown.org/yihui/blogdown/workflow.html">Blogdown</a> which you must read. Even then, you may end up with some troubles as I did.</p>
+<div id="setting-up-hugo-rstudio-with-netlify-github-the-story-of-this-site" class="section level2">
+<h2>Setting up Hugo &amp; RStudio with Netlify &amp; Github: the story of this site</h2>
+<div class="figure">
+<img src="/images/ocean.jpg" alt="Ocean (courtesy: Unsplash)" />
+<p class="caption">Ocean (courtesy: Unsplash)</p>
+</div>
+<p>Standing in front of an ocean and counting the waves!</p>
+<p>RStudio makes management of the blog on writing data analysis with github easy I’d say. Yihui Xie explains the details in the book <a href="https://bookdown.org/yihui/blogdown/workflow.html">Blogdown</a> which you must read. Even then, you may end up and shoot a few troubles as I did. For a more graphical explanation, check out <a href="https://alison.rbind.io/post/up-and-running-with-blogdown/">Alison’s Post</a></p>
 <p>Assuming that you hava RStudio set up and configured, you will need to do the following:</p>
 </div>
-<div id="first-the-nine-step-process-to-get-going-on-your-machine" class="section level2">
-<h2>First, the nine-step process to get going on your machine</h2>
+<div id="first-the-eight-step-process-to-get-going-on-your-machine" class="section level2">
+<h2>First, the eight-step process to get going on your machine</h2>
 <ol style="list-style-type: decimal">
-<li>First, Install blogdown package.</li>
-<li>Next, install Hugo if you have not already installed it.</li>
-<li>Edit the <code>~/.Rprofile</code> site as they detail in the book.</li>
+<li>First, Install the blogdown package.</li>
+<li>Next, install <a href="http://gohugo.io">Hugo</a> if you have not already installed it.</li>
+<li>Edit the <code>~/.Rprofile</code> site as they detail in the <a href="https://bookdown.org/yihui/blogdown/">blogdown book</a>.</li>
 <li>Then generate the site using <code>blogdown::new_site</code></li>
-<li>I will need to change the theme to academic, so will see how we do that here. (I still haven’t figured that yet, :-) ). Also, check and edit the config.toml file.</li>
-<li>Write a post using the Addins dropdown menu. Most of the stuff should be ready for you to configure anyway, which is good.</li>
+<li>Write a post using the Addins dropdown menu from Rstudio. Most of the stuff should be ready for you to configure anyway, which is good.</li>
 <li>Click Serve Site to see the changes in a preview, but remember that when you will serve site you cannot work on the R console. It is locked.</li>
 <li>Stop the server and restart R (In Mac, Cmd-shift-F10, or Session &gt;&gt; Restart R)</li>
 <li>Then, do <code>blogdown::hugo_build()</code>; this will build the site for you and put all files in the public folder.</li>
@@ -58,5 +62,4 @@ tags:
 </ol>
 <p>I think the best thing would be to contact rbind.org folks and get an rbind.org sitename address if your aim is to work in data sciencey type of work or using it as a knowledgebase for Rstudio or R and data science. But you can change, as I changed the URL of this blog to:</p>
 <p><a href="https://arinbasu-r.netlify.com">arinbasu-r.netlify.com</a></p>
-<p>I am still finding out.</p>
 </div>
