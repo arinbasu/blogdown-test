@@ -69,8 +69,8 @@
     
 
     <div class="article-content">
-      <div id="setting-hugo-rstudio-blogging-with-netlify-github-er" class="section level2">
-<h2>Setting Hugo RStudio Blogging with Netlify &amp; Github … er …</h2>
+      <div id="settling-hugo-rstudio-blogging-with-netlify-github" class="section level2">
+<h2>Settling Hugo RStudio Blogging with Netlify &amp; Github</h2>
 <p>Learned my lessons in setting up the blog and hopefully this will be useful information for some. RStudio makes management of the blog with github easy I’d say. Yihui explains the details in the book <a href="https://bookdown.org/yihui/blogdown/workflow.html">Blogdown</a> which you must read. Even then, you may end up with some troubles as I did.</p>
 <p>Assuming that you hava RStudio set up and configured, you will need to do the following:</p>
 </div>
@@ -110,8 +110,10 @@
 <p>Phew, if everything goes well, you will have a github repo with all the files and folders from your site. Now, go to step three</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Step 3, you will connect your github repo to netlify. This is tricky, as Netlify only recognises hugo_0.19! I had a hard time in specifying hugo version 0.30 that I currently use and I had repeated build errors. Remember to put hugo_0.19 for build command, and public for the production folder. I found that adding “hugo” to buiild command in netlify does not work.</li>
-<li>Step 4, deploy. Netlify will provide you with a peculiar site name that you will need to reconfigure. I think the best thing would be to contact rbind.org folks and get an rbind.org sitename address if your aim is to work in data sciencey type of work or using it as a knowledgebase for Rstudio or R and data science.</li>
+<li>Step 4, deploy. Netlify will provide you with a peculiar site name that you will need to reconfigure.</li>
 </ol>
+<p>I think the best thing would be to contact rbind.org folks and get an rbind.org sitename address if your aim is to work in data sciencey type of work or using it as a knowledgebase for Rstudio or R and data science. But you can change, as I changed the URL of this blog to:</p>
+<p><a href="https://arinbasu-r.netlify.com">arinbasu-r.netlify.com</a></p>
 <p>I am still finding out.</p>
 </div>
 

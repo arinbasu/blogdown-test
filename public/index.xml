@@ -17,7 +17,7 @@
       <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/04/hello-world/</guid>
-      <description>Setting Hugo RStudio Blogging with Netlify &amp;amp; Github … er … Learned my lessons in setting up the blog and hopefully this will be useful information for some. RStudio makes management of the blog with github easy I’d say. Yihui explains the details in the book Blogdown which you must read. Even then, you may end up with some troubles as I did.
+      <description>Settling Hugo RStudio Blogging with Netlify &amp;amp; Github Learned my lessons in setting up the blog and hopefully this will be useful information for some. RStudio makes management of the blog with github easy I’d say. Yihui explains the details in the book Blogdown which you must read. Even then, you may end up with some troubles as I did.
 Assuming that you hava RStudio set up and configured, you will need to do the following:</description>
     </item>
     
@@ -37,7 +37,9 @@ Assuming that you hava RStudio set up and configured, you will need to do the fo
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
+      <description>Hi, my name is Arindam Basu and I am an academic at the University of Canterbury&amp;rsquo;s School of Health Sciences. This blog is about data science and tutorial texts and various other bits. I also blog in Medium, and my official university page is here: Arin Basu&amp;rsquo;s UC page
+This page is made possible by:
+blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
     </item>
     
     <item>

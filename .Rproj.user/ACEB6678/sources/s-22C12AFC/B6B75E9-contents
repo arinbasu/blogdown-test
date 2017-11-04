@@ -11,7 +11,7 @@ tags:
   - plot
 ---
 
-## Settling Hugo RStudio Blogging with Netlify & Github ... er ...
+## Settling Hugo RStudio Blogging with Netlify & Github
 
 Learned my lessons in setting up the blog and hopefully this will be useful information for some. RStudio makes management of the blog with github easy I'd say. Yihui explains the details in the book [Blogdown](https://bookdown.org/yihui/blogdown/workflow.html) which you must read. Even then, you may end up with some troubles as I did. 
 
@@ -56,7 +56,11 @@ The best way to do is to get an account with Netlify and then connect a github r
 Phew, if everything goes well, you will have a github repo with all the files and folders from your site. Now, go to step three
 
 3. Step 3, you will connect your github repo to netlify. This is tricky, as Netlify only recognises hugo_0.19! I had a hard time in specifying hugo version 0.30 that I currently use and I had repeated build errors. Remember to put hugo_0.19 for build command, and public for the production folder. I found that adding "hugo" to buiild command in netlify does not work. 
-4. Step 4, deploy. Netlify will provide you with a peculiar site name that you will need to reconfigure. I think the best thing would be to contact rbind.org folks and get an rbind.org sitename address if your aim is to work in data sciencey type of work or using it as a knowledgebase for Rstudio or R and data science. 
+4. Step 4, deploy. Netlify will provide you with a peculiar site name that you will need to reconfigure. 
+
+I think the best thing would be to contact rbind.org folks and get an rbind.org sitename address if your aim is to work in data sciencey type of work or using it as a knowledgebase for Rstudio or R and data science. But you can change, as I changed the URL of this blog to:
+
+[arinbasu-r.netlify.com](https://arinbasu-r.netlify.com)
 
 I am still finding out. 
 
