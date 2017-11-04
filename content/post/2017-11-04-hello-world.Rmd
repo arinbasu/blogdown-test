@@ -1,0 +1,24 @@
+---
+title: Hello World!
+author: Arindam Basu
+date: '2017-11-04'
+slug: hello-world
+categories:
+  - R
+  - test
+tags:
+  - test
+  - plot
+---
+
+## The first try
+
+Setting up a blog using RStudio is exciting. 
+Steps:
+
+1. Install blogdown
+2. Write the post 
+3. Connect Github to Netlify
+4. Push the contents of the folder to Git
+5. Deploy
+
