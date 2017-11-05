@@ -13,7 +13,7 @@ tags:
 
 ## Setting up Hugo & RStudio with Netlify & Github: the story of this site
 
-![Ocean (courtesy: Unsplash)](/images/ocean.jpg)
+
 
 Standing in front of an ocean and counting the waves!
 

@@ -17,8 +17,7 @@
       <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/04/hello-world/</guid>
-      <description>Setting up Hugo &amp;amp; RStudio with Netlify &amp;amp; Github: the story of this site Ocean (courtesy: Unsplash)
- Standing in front of an ocean and counting the waves!
+      <description>Setting up Hugo &amp;amp; RStudio with Netlify &amp;amp; Github: the story of this site Standing in front of an ocean and counting the waves!
 RStudio makes management of the blog on writing data analysis with github easy I’d say. Yihui Xie explains the details in the book Blogdown which you must read. Even then, you may end up and shoot a few troubles as I did. For a more graphical explanation, check out Alison’s Post</description>
     </item>
     
